@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//P1051 [NOIP2005 提高组] 谁拿了最多奖学金
 typedef struct student {
     char name[21];
     int final_grade;
@@ -16,7 +17,7 @@ int main() {
     scanf("%d", &n);
     while (getchar() != '\n')
         continue;
-    stu stus[100];  //洛谷的c编译器好像不支持变长数组
+    stu stus[100];
     for (int i = 0; i < n; i++) {
         scanf("%s %d %d  %c %c %d", stus[i].name, &stus[i].final_grade,
               &stus[i].class_grade, &stus[i].isChair, &stus[i].isWest,

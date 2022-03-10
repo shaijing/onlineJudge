@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//P1093 [NOIP2007 普及组] 奖学金
 typedef struct stud {
     int id;
     int ch;
