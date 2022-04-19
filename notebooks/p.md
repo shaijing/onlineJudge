@@ -20,7 +20,6 @@
 
 * * *
 （剩余部分不予展示）
-```
 ```c
 #include <stdio.h>
 int main()
