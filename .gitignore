@@ -1,3 +1,18 @@
-/.idea/
+# Vscode cache
 /.vscode/
-/build/
+
+# IDEA cache
+/cmake-build-debug/
+/.idea/
+
+# MacOS Cache
+.DS_Store
+
+#Doxygen Cache
+/html/
+Doxygen
+
+# File
+*.exe
+*.co
+*.cppo
