@@ -2,6 +2,7 @@ export ROOT_DIR=$(shell pwd)
 
 
 SUBDIRS = $(ROOT_DIR)/luogu/algorithm/
+SUBDIRS += $(ROOT_DIR)/pat
 define make_subdir
 @for i in $(SUBDIRS); do\
 (cd $$i && make $1) \

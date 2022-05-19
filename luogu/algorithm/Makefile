@@ -25,7 +25,7 @@ all:$(TargetFiles)
 %:%.c
 	$(CC) -g -o $@ $< 
 %:%.cpp
-	$(CPP) -g -o $@ $< 
+	$(CPP) -g -o $@ $<
 
 clean:
 	-rm -f $(TargetFiles)
