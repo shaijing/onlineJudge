@@ -20,8 +20,8 @@ int main() {
     stu stus[100];
     for (int i = 0; i < n; i++) {
         scanf("%s %d %d  %c %c %d", stus[i].name, &stus[i].final_grade,
-              &stus[i].class_grade, &stus[i].isChair, &stus[i].isWest,
-              &stus[i].paper);
+            &stus[i].class_grade, &stus[i].isChair, &stus[i].isWest,
+            &stus[i].paper);
         stus[i].bonus = 0;
         while (getchar() != '\n')
             continue;

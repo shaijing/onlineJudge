@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int num[26] = {0};
+    int num[26] = { 0 };
     int n = 4, max = 0;
     char ch;
     while (n) {

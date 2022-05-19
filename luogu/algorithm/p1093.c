@@ -31,11 +31,14 @@ int mycmp(const void* p1, const void* p2) {
     const stu* ptr2 = (stu*)p2;
     if (ptr1->sum > ptr2->sum) {
         return -1;
-    } else if (ptr1->sum == ptr2->sum) {
+    }
+    else if (ptr1->sum == ptr2->sum) {
         if (ptr1->ch >= ptr2->ch) {
             return -1;
-        } else
+        }
+        else
             return 1;
-    } else
+    }
+    else
         return 1;
 }

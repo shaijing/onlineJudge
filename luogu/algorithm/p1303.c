@@ -4,8 +4,8 @@
 int mutiplaly(char*, char*, int*);
 
 int main() {
-    char str1[MAXN] = {0}, str2[MAXN] = {0};
-    int num[MAXN] = {0};
+    char str1[MAXN] = { 0 }, str2[MAXN] = { 0 };
+    int num[MAXN] = { 0 };
     scanf("%s %s", str1, str2);
     int len = mutiplaly(str1, str2, num);
     for (int i = 0; i < len; i++) {
@@ -15,12 +15,12 @@ int main() {
     return 0;
 }
 int mutiplaly(char* num0_str, char* num1_str, int* num) {
-    int num0[MAXN] = {0}, num1[MAXN] = {0}, t_num[MAXN] = {0};
+    int num0[MAXN] = { 0 }, num1[MAXN] = { 0 }, t_num[MAXN] = { 0 };
     int len, len0, len1;
     len0 = strlen(num0_str);
     len1 = strlen(num1_str);
     len = len0 + len1;
-    if((len0==1&&num0_str[0]-'0'==0)||(len1==1&&num1_str[0]-'0'==0)){//注意==号
+    if ((len0 == 1 && num0_str[0] - '0' == 0) || (len1 == 1 && num1_str[0] - '0' == 0)) {//注意==号
         num[0] = 0;
         return 1;
     }
@@ -48,5 +48,5 @@ int mutiplaly(char* num0_str, char* num1_str, int* num) {
         num[i] = t_num[j];
     }
 
-    return len+1;
+    return len + 1;
 }

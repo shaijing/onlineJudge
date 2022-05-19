@@ -1,10 +1,10 @@
 /**
  * @File Name: p1563_r.cpp
- * @Brief : 
+ * @Brief :
  * @Author : YuLing (yulingsc@outlook.com)
  * @Version : 1.0
  * @Creat Date : 2022-04-12
- * 
+ *
  */
 #include <iostream>
 #include <string>

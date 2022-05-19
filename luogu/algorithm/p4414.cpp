@@ -2,7 +2,7 @@
 int main() {
     int max, min, sum;
     int num[3];
-    char ch[3] = {'\0'};
+    char ch[3] = { '\0' };
     scanf("%d%d%d", &num[0], &num[1], &num[2]);
     while (getchar() != '\n')
         ;

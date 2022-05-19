@@ -16,7 +16,7 @@ int main() {
         for (int j = 0; j < n; j++) {
             w += a[j];
             l += 1 - a[j];
-            if ((w>l?w:l) >= jz[i] && fabs(w - l) >= 2) {
+            if ((w>l?w:l) >= jz[i] && fabs((double)w - l) >= 2) {
                 printf("%d:%d\n", w, l);
                 w = l = 0;
             }

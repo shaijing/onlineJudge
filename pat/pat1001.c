@@ -7,7 +7,8 @@ int main(void) {
         if (n != 1 && n % 2 == 0) {
             n = n / 2;
             count++;
-        } else if (n != 1 && n % 2 != 0) {
+        }
+        else if (n != 1 && n % 2 != 0) {
             n = 3 * n + 1;
             n = n / 2;
             count++;

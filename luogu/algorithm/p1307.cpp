@@ -14,10 +14,11 @@ int main() {
             if (num[i] != '0' || in == true)
                 in = true, putchar(num[i]);
         }
-    } else {
+    }
+    else {
         for (int i = n - 1; i >= 0; --i) {
-            if (num[i] != '0'|| in == true)
-                in = true,putchar(num[i]);
+            if (num[i] != '0' || in == true)
+                in = true, putchar(num[i]);
         }
     }
 

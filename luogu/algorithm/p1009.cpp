@@ -47,7 +47,7 @@ int main() {
     int m;
     cin >> m;
     for (int i = 1; i <= m; i++) {
-        fac =fac * i;
+        fac = fac * i;
         ans = ans + fac;
     }
     ans.print();
