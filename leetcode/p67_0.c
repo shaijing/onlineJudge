@@ -4,7 +4,9 @@
 char* addBinary(char* a, char* b);
 
 int main(int argc, char** argv) {
-    printf("%s\n", addBinary("11", "1110"));
+    char* ptr = addBinary("0", "0");
+    printf("%s\n", ptr);
+    free(ptr);
     return 0;
 }
 char* addBinary(char* a, char* b) {
@@ -14,17 +16,22 @@ char* addBinary(char* a, char* b) {
     int a_len = strlen(a);
     int b_len = strlen(b);
     int res_len = a_len > b_len ? a_len : b_len;
-    char* res = (char*)calloc(res_len + 1, sizeof(char));
+    if (!a || a_len == 0)
+        return b;
+    if (!b || b_len == 0)
+        return a;
+    char* res = (char*)calloc(res_len + 2, sizeof(char));
     for (int i = a_len - 1, j = 0;i >= 0;i--, j++)
         a1[j] = a[i] - '0';
 
     for (int i = b_len - 1, j = 0;i >= 0;i--, j++)
         b1[j] = b[i] - '0';
+
     for (int i = 0; i < res_len; i++) {
         c[i] += a1[i] + b1[i];
         c[i + 1] = (c[i] == 2 ? 1 : 0);
-        c[i] = (c[i] == 2 ? 0 : 1);
-
+        if (c[i] == 2)
+            c[i] = 0;
     }
     if (c[res_len])
         res_len++;

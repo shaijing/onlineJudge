@@ -11,6 +11,6 @@ char* addBinary(char* a, char* b) {
     int a_len = strlen(a);
     int b_len = strlen(b);
     int res_len = a_len > b_len ? a_len : b_len;
-    char* res = (char*)calloc(res_len + 1, sizeof(char));
+    char* res = (char*)calloc(res_len + 2, sizeof(char));
 
 }

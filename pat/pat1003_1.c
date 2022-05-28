@@ -28,7 +28,7 @@ bool judge(char* ptr) {
     unsigned long long lens = strlen(ptr);
     char* p = strchr(ptr, 'P');
     char* t = strchr(ptr, 'T');
-    int a[3] = {0, 0, 0};
+    int a[3] = { 0, 0, 0 };
     if (p == NULL || t == NULL)
         return false;
     if ((t - p) < 2)

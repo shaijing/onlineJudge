@@ -10,9 +10,10 @@
 
 #Doxygen Cache
 /html/
-Doxygen
+
 
 # File
 *.exe
 *.co
 *.cppo
+*.pdf

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
 	char c;
 	int num;
 	scanf("%d", &num);
@@ -11,7 +10,7 @@ int main()
 	for (int i = 0; i < num; i++) {
 		/* pos: indicate the position of current index for count[]     */
 		/* count[3]: number of As; before P, between P & T and after T */
-		int pos = 0, count[3] = {0, 0, 0};
+		int pos = 0, count[3] = { 0, 0, 0 };
 		while ((c = getchar()) != EOF) {
 			if (c == 'A')                   /* count 'A's     */
 				count[pos]++;
@@ -24,9 +23,9 @@ int main()
 		}
 
 		if (c == '\n'                       /* 1. no other characters at end */
-		&& pos == 2                         /* 2. appearance of 'P' and 'T'  */
-		&& count[1]                         /* 3. existance of 'A'           */
-		&& count[2] == count[1] * count[0]) /* 4. relation between numbers   */
+			&& pos == 2                         /* 2. appearance of 'P' and 'T'  */
+			&& count[1]                         /* 3. existance of 'A'           */
+			&& count[2] == count[1] * count[0]) /* 4. relation between numbers   */
 			puts("YES");
 		else
 			puts("NO");

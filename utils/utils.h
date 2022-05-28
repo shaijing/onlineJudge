@@ -1,5 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
+
+unsigned __builtin_popcount(unsigned num);
+
+#endif // UTILS_H
+
+#ifndef PRINTF_BINARY_PATTERN_INT8
 /* --- PRINTF_BYTE_TO_BINARY macro's --- */
 #define PRINTF_BINARY_PATTERN_INT8 "%c%c%c%c%c%c%c%c,"
 #define PRINTF_BYTE_TO_BINARY_INT8(i)    \
@@ -25,8 +31,4 @@
 #define PRINTF_BYTE_TO_BINARY_INT64(i) \
     PRINTF_BYTE_TO_BINARY_INT32((i) >> 32), PRINTF_BYTE_TO_BINARY_INT32(i)
 /* --- end macros --- */
-
-
-unsigned __builtin_popcount(unsigned num);
-
-#endif // UTILS_H
+#endif // PRINTF_BINARY_PATTERN_INT8

@@ -6,6 +6,8 @@ export CXX_FLAGS=-g -std=c++11 -DDEBUG -w -Wall
 
 SUBDIRS = $(ROOT_DIR)/luogu/algorithm/
 SUBDIRS += $(ROOT_DIR)/pat
+SUBDIRS += $(ROOT_DIR)/leetcode
+SUBDIRS += $(ROOT_DIR)/test
 define make_subdir
 @for i in $(SUBDIRS); do\
 (cd $$i && make $1) \
