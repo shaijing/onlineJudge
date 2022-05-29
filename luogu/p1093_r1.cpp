@@ -9,5 +9,6 @@ int main() {
         calc[i] = (x + y + z) * 100000000 + x * 100000 + 99999 - i;
     }
     sort(calc + 1, calc + n + 1);
-    for (i = n;i > n - 5;i--) cout << 99999 - calc[i] % 100000 << ' ' << calc[i] / 100000000 << endl;
+    for (i = n;i > n - 5;i--)
+        cout << 99999 - calc[i] % 100000 << ' ' << calc[i] / 100000000 << endl;
 }

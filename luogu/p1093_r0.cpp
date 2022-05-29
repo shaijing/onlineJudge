@@ -15,7 +15,9 @@ int main() {
 		for (j = i + 1;j <= n;j++)
 			if (d[i] < d[j] || (d[i] == d[j] && a[i] < a[j])) {
 				//总分少或者总分一样，语文少，交换
-				swap(d[i], d[j]);swap(a[i], a[j]);swap(e[i], e[j]);
+				swap(d[i], d[j]);
+				swap(a[i], a[j]);
+				swap(e[i], e[j]);
 			}
 	cout << e[1] << " " << f[e[1]];//输出
 	for (i = 2;i <= 5;i++) {
