@@ -1,40 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
-#include <stdlib.h>
-/* --- PRINTF_BYTE_TO_BINARY macro's --- */
-#define PRINTF_BINARY_PATTERN_INT8 "%c%c%c%c%c%c%c%c,"
-#define PRINTF_BYTE_TO_BINARY_INT8(i)    \
-    (((i) & 0x80ll) ? '1' : '0'), \
-    (((i) & 0x40ll) ? '1' : '0'), \
-    (((i) & 0x20ll) ? '1' : '0'), \
-    (((i) & 0x10ll) ? '1' : '0'), \
-    (((i) & 0x08ll) ? '1' : '0'), \
-    (((i) & 0x04ll) ? '1' : '0'), \
-    (((i) & 0x02ll) ? '1' : '0'), \
-    (((i) & 0x01ll) ? '1' : '0')
+#include <stdc.h>
 
-#define PRINTF_BINARY_PATTERN_INT16 \
-    PRINTF_BINARY_PATTERN_INT8              PRINTF_BINARY_PATTERN_INT8
-#define PRINTF_BYTE_TO_BINARY_INT16(i) \
-    PRINTF_BYTE_TO_BINARY_INT8((i) >> 8),   PRINTF_BYTE_TO_BINARY_INT8(i)
-#define PRINTF_BINARY_PATTERN_INT32 \
-    PRINTF_BINARY_PATTERN_INT16             PRINTF_BINARY_PATTERN_INT16
-#define PRINTF_BYTE_TO_BINARY_INT32(i) \
-    PRINTF_BYTE_TO_BINARY_INT16((i) >> 16), PRINTF_BYTE_TO_BINARY_INT16(i)
-#define PRINTF_BINARY_PATTERN_INT64    \
-    PRINTF_BINARY_PATTERN_INT32             PRINTF_BINARY_PATTERN_INT32
-#define PRINTF_BYTE_TO_BINARY_INT64(i) \
-    PRINTF_BYTE_TO_BINARY_INT32((i) >> 32), PRINTF_BYTE_TO_BINARY_INT32(i)
-/* --- end macros --- */
+static int cmp(const void* p1, const void* p2);
 int main(int argc, char** argv) {
-    // int a = 0b10101010;
-    // printf("%#o\n", ~a);
-    // printf(PRINTF_BINARY_PATTERN_INT32 "\n",
-    //     PRINTF_BYTE_TO_BINARY_INT32(~a));
-    char str[] = "abc";
+    int num[10] = { 6,8,9,1,3,5,4,2,0,7 };
+    qsort(num, 10, sizeof(int),cmp);
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", num[i]);
+    }
 
-    char* b = strchr(str, 'b');
-    printf("%d", *b);
     return 0;
+}
+
+/**
+  @param p1
+  @param p2
+  @return -1 不交换位置; 1 交换位置;
+
+ */
+static int cmp(const void* p1, const void* p2) {
+    if (*(int*)p1 > *(int*)p2)
+        return -1;
+    else if (*(int*)p2 == *(int*)p1)
+        return 0;
+    else
+        return 1;
 }
